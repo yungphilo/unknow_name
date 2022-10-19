@@ -9,7 +9,7 @@ go 代理配置 安装工具会用到
 package 名字和文件夹名不一致时 引用需要注意
 
 
-![alt](import-package.png)
+![图片 alt](https://github.com/yungphilo/unknow_name/blob/office/demo1/import-package.png)
 
 
 git config --global user.name "你的GitHub用户名"
@@ -34,5 +34,5 @@ ssh git@github.com
 如果显示下面这样就是成功了
 ![图片alt](https://pic2.zhimg.com/80/v2-87ec0cf43e93d2a01aac117d4f0ad2dd_720w.webp "图片title")
 ***markdown 本地图片不支持绝对路径***
-![图片alt](gitclone.png)
+![图片alt](https://github.com/yungphilo/unknow_name/blob/office/demo1/gitclone.png)
 ***-b 是选择分支 默认是master分支，github.com后面是 ":" 不是 "/"***
