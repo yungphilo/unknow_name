@@ -32,7 +32,11 @@ Title随便输入，Key粘贴刚才复制的key,然后点击Add SSH key
 
 ssh git@github.com
 如果显示下面这样就是成功了
+
 ![图片alt](https://pic2.zhimg.com/80/v2-87ec0cf43e93d2a01aac117d4f0ad2dd_720w.webp "图片title")
+
 ***markdown 本地图片不支持绝对路径***
+
 ![图片alt](https://github.com/yungphilo/unknow_name/blob/office/demo1/gitclone.png)
+
 ***-b 是选择分支 默认是master分支，github.com后面是 ":" 不是 "/"***
