@@ -1,39 +1,23 @@
-// package main
-
-// import (
-// 	"fmt"
-// 	"os"
-// 	"runtime"
-// )
-
-// func main() {
-// 	var goos string = runtime.GOOS
-// 	fmt.Printf("The operating system is: %s\n", goos)
-// 	path := os.Getenv("PATH")
-// 	fmt.Printf("Path is %s\n", path)
-// }
 package main
 
-var a = "G"
+var a string
 
+//输出结果为"GO" a的初始值为空，也不是空格
 func main() {
-	n()
-	l()
-	m()
-	n()
+	a := "G"
+	print(a)
+	f2()
+	f1()
+
 }
 
-func n() {
+func f1() {
+	a := "O"
 	print(a)
+	f2()
 }
 
-func m() {
-
-	a = "O" //对变量"a"重新赋值，而"a"是全局变量，所以再次执行函数n时，打印为"O";
-	//a : = "O" //若"a : = "O";则是在这个函数体中初始化了一个和全局变量"a"相同名字的一个局部变量,所以再次执行函数n时,打印的还为为初始值"G"
-	//所以为了可读性还是不要把局部变量和全局变量起同一个名字
+func f2() {
 	print(a)
-}
-func l() {
-	print(a)
+	//这个是全局变量，f1的局部变量不会传递给所调用的函数，变量只作用在{}内，即使是在main中声明的变量也不会传递下来
 }
