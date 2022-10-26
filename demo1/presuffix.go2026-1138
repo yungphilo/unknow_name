@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -103,6 +104,18 @@ func main() {
 	fmt.Println(len([]rune(coding)))
 	fmt.Println([]byte(coding))
 	fmt.Println([]rune(coding))
+	// 字符串与其他类型的转换
+	var orig string = "6666"
+	var an int
+	var newStr string
+	//var err int
+	//输出int类型所占位数，32位系统输出32,64位系统输出64
+	fmt.Printf("The size of ints is: %d\n", strconv.IntSize)
+	an, _ = strconv.Atoi(orig)
+	fmt.Printf("The integer is: %d\n", an)
+	an = an + 5
+	newStr = strconv.Itoa(an)
+	fmt.Printf("The new string is: %s\n", newStr)
 
 }
 
