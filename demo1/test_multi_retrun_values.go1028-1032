@@ -1,0 +1,35 @@
+package main
+
+import (
+	"fmt"
+	"math"
+	"strconv"
+)
+
+func main() {
+	var orig string = "9527"
+	var newS string
+	fmt.Printf("The size of ints is: %d\n", strconv.IntSize)
+	an, err := strconv.Atoi(orig)
+	if err != nil {
+		fmt.Printf("orig %s is not an integer - exiting with error\n", orig)
+		//return err 会报错,想看错误信息可以打印出来
+		//fmt.Printf("orig %s is not an integer - exiting with error: %s\n", orig, err)
+		return
+	}
+	fmt.Printf("The integer is %d\n", an)
+	an = an + 5
+	newS = strconv.Itoa(an)
+	fmt.Printf("The new string is: %s\n", newS)
+	t, ok := mySqrt(10.0)
+	if ok {
+		fmt.Println(t)
+	}
+
+}
+func mySqrt(f float64) (v float64, ok bool) {
+	if f < 0 {
+		return
+	} // error case
+	return math.Sqrt(f), true //sqrt 求平方根
+}
