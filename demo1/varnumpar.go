@@ -21,4 +21,5 @@ func min(s ...int) int {
 		}
 	}
 	return min
+	//just tetst
 }
