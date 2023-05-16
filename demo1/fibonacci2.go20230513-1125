@@ -1,0 +1,85 @@
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	i := 18
+
+// 	result, i := fibonacci(i)
+// 	fmt.Printf("第%d个斐波那契数是: %d\n", i, result)
+
+// }
+
+// func fibonacci(n int) (res, po int) {
+// 	if n <= 1 {
+// 		res = 1
+// 	} else {
+// 		v1, _ := fibonacci(n - 1)
+// 		v2, _ := fibonacci(n - 2)
+// 		//res = fibonacci(n-1) + fibonacci(n-2)
+// 		res = v1 + v2
+// 	}
+// 	po = n
+// 	return
+// }
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	pos := 4
+// 	result, pos := fibonacci(pos)
+// 	fmt.Printf("the %d-th fibonacci number is: %d\n", pos, result)
+// 	pos = 10
+// 	result, pos = fibonacci(pos)
+// 	fmt.Printf("the %d-th fibonacci number is: %d\n", pos, result)
+// }
+
+// func fibonacci(n int) (val, pos int) {
+// 	if n <= 1 {
+// 		val = 1
+// 	} else {
+// 		v1, _ := fibonacci(n - 1)
+// 		v2, _ := fibonacci(n - 2)
+// 		val = v1 + v2
+// 	}
+// 	pos = n
+// 	return
+// }
+//以上是递归法求斐波那契，时间复杂度指数上涨；以下为非递归法
+package main
+
+import "fmt"
+
+func main() {
+	// var q uint64
+	// for q = 1; q <= 120; q++ {
+	// 	result, q := fibonacci(q)
+	// 	fmt.Printf("fibonacci(%d) is: %d\n", q, result)
+	// }
+	//int64数据溢出
+	// var i uint64 = 3
+	// res, i := fibonacci(i)
+	// fmt.Printf("第%d个斐波那契数是: %d\n", i, res)
+	var a uint64 = 7540113804746346429
+	var b uint64 = 12200160415121876738
+	var c uint64 = a + b
+	fmt.Println(c)
+}
+func fibonacci(n uint64) (res, pos uint64) {
+	if n <= 2 {
+		res = 1
+	} else {
+		var v1, v2 uint64 = 1, 1
+		var i uint64
+		for i = 2; i < n-1; i++ {
+			v2 = v1 + v2
+			v1 = v2 - v1
+			//res = v1 + v2
+		}
+		res = v1 + v2
+
+	}
+	pos = n
+	return
+}

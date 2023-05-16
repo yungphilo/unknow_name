@@ -1,0 +1,84 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+// const (
+// 	v1 = 3
+// 	v2 = 5
+// 	v3 = 15
+// )
+
+func main() {
+	for i := 0; i <= 10; i++ {
+		fmt.Printf("This is the %d iteration\n", i)
+		fmt.Printf("The complement of %b is %b\n", i, ^i)
+
+	}
+	str := "Go is a beautiful language!"
+	fmt.Printf("The length of str is: %d\n", len(str))
+	for ix := 0; ix < len(str); ix++ {
+		fmt.Printf("Character on position %d is: %c \n", ix, str[ix])
+	}
+	str2 := "汉语"
+	fmt.Printf("The length of str2 is: %d\n", len(str2))
+	for ix := 0; ix < len(str2); ix++ {
+		fmt.Printf("Character on position %d is: %c \n", ix, str2[ix])
+	}
+	for j := 0; j < 15; j++ {
+		fmt.Println(j)
+	}
+	for k := 1; k <= 25; k++ {
+		fmt.Println(strings.Repeat("G", k))
+	}
+	//v1, v2, v3 := 3, 5, 15
+
+	for nu := 0; nu <= 100; nu++ {
+		switch {
+		case nu%3 == 0 && nu%5 == 0:
+			fmt.Println("FizzBuzz")
+		case nu%5 == 0:
+			fmt.Println("Buzz")
+		case nu%3 == 0:
+			fmt.Println("Fizz")
+		default:
+			fmt.Println(nu)
+		}
+
+	}
+	for i := 0; i < 10; i++ {
+		fmt.Println(strings.Repeat("*", 20))
+	}
+	for pos, char := range str {
+		fmt.Printf("Character on position %d is: %c \n", pos, char)
+	}
+	for pos, char := range str2 {
+		fmt.Printf("Character on position %d is: %c \n", pos, char)
+	}
+	for index, rune := range str2 {
+		fmt.Printf("%-2d %d %U '%c' % X\n", index, rune, rune, rune, []byte(string(rune)))
+	}
+	for i := 0; i < 5; i++ {
+		var v int
+		fmt.Printf("%d ", v)
+		v = 5
+	}
+	// for i := 0; ; i++ {
+	// 	fmt.Println("Value of i is now:", i)
+	// }
+	// for i := 0; i < 3; {
+	// 	fmt.Println("Value of i:", i)
+	// }
+	s := ""
+	for s != "aaaaa" {
+		fmt.Println("Value of s:", s)
+		s = s + "a"
+	}
+	for i, j, s := 0, 5, "a"; i < 3 && j < 100 && s != "aaaaa"; i, j,
+		s = i+1, j+1, s+"a" {
+		fmt.Println("Value of i, j, s:", i, j, s)
+	}
+
+}

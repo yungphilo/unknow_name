@@ -1,0 +1,46 @@
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	start := time.Now()
+
+	// result := 0
+	var i, result uint64
+	for i = 0; i <= 10; i++ {
+		result, i = fibonacci2(i)
+		fmt.Printf("fibonacci(%d) is: %d\n", i, result)
+	}
+	end := time.Now()
+	delta := end.Sub(start)
+	fmt.Printf("longCalculation took this amount of time: %s\n", delta)
+}
+
+func fibonacci(n int) (res int) {
+	if n <= 1 {
+		res = 1
+	} else {
+		res = fibonacci(n-1) + fibonacci(n-2)
+	}
+	return
+}
+func fibonacci2(n uint64) (res, pos uint64) {
+	if n <= 2 {
+		res = 1
+	} else {
+		var v1, v2 uint64 = 1, 1
+		var i uint64
+		for i = 2; i < n-1; i++ {
+			v2 = v1 + v2
+			v1 = v2 - v1
+			//res = v1 + v2
+		}
+		res = v1 + v2
+
+	}
+	pos = n
+	return
+}

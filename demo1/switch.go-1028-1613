@@ -1,0 +1,105 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	var num1 int = 100
+
+	switch num1 {
+	case 98, 99:
+		fmt.Println("It's equal to 98")
+	case 100:
+		fmt.Println("It's equal to 100")
+	default:
+		fmt.Println("It's not equal to 98 or 100")
+	}
+	switch {
+	case i > 0:
+		f1(i)
+	case i == 0:
+		f2(i)
+	case i < 0:
+		f3(i)
+	}
+	num1 = num1 - 93
+	switch {
+	case num1 < 0:
+		fmt.Println("Number is negative")
+	case num1 > 0 && num1 < 10:
+		fmt.Println("Number is between 0 and 10")
+	default:
+		fmt.Println("Number is 10 or greater")
+	}
+	k := 6
+	switch k {
+	case 4:
+		fmt.Println("was <= 4")
+		fallthrough
+	case 5:
+		fmt.Println("was <= 5")
+		fallthrough
+	case 6:
+		fmt.Println("was <= 6")
+		fallthrough
+	case 7:
+		fmt.Println("was <= 7")
+		fallthrough
+	case 8:
+		fmt.Println("was <= 8")
+		fallthrough
+	default:
+		fmt.Println("default case")
+	}
+	j = 10
+	Season(j)
+}
+
+var i = -9.0
+
+func f1(float64) {
+	fmt.Println(math.Sqrt(i))
+}
+func f2(float64) {
+	fmt.Println(0)
+}
+func f3(float64) {
+	i = -i
+	fmt.Printf("square root of %v is: %v\n", i, math.Sqrt(i))
+}
+
+var j int
+
+func Season(int) {
+	switch j {
+	case 1:
+		fmt.Printf("January(%d) is the spring\n", j)
+	case 2:
+		fmt.Printf("February(%d) is the spring\n", j)
+	case 3:
+		fmt.Printf("March(%d) is the spring\n", j)
+	case 4:
+		fmt.Printf("April(%d) is the summer\n", j)
+	case 5:
+		fmt.Printf("May(%d) is the summer\n", j)
+	case 6:
+		fmt.Printf("June(%d) is the summer\n", j)
+	case 7:
+		fmt.Printf("July(%d) is the fall\n", j)
+	case 8:
+		fmt.Printf("August(%d) is the fall\n", j)
+	case 9:
+		fmt.Printf("September(%d) is the fall\n", j)
+	case 10:
+		fmt.Printf("October(%d) is the winter\n", j)
+	case 11:
+		fmt.Printf("November(%d) is the winter\n", j)
+	case 12:
+		fmt.Printf("December(%d) is the winter\n", j)
+	default:
+		fmt.Printf("%d is not month-number", j)
+	}
+
+}
