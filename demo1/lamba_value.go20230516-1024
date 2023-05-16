@@ -1,0 +1,32 @@
+// lambda_value.go
+package main
+
+import (
+	"fmt"
+	"log"
+	"runtime"
+)
+
+func main() {
+	where := func() {
+		_, file, line, _ := runtime.Caller(1)
+		log.Printf("%s:%d", file, line)
+	}
+	where()
+	// 打印调试 代码时间和位置
+	fv := func() {
+		fmt.Println("Hello World!")
+	}
+	fv()
+
+	fmt.Printf("The type of fv is %T\n", fv)
+}
+
+// var where = log.Print
+
+// func func1() {
+// 	where()
+// 	where()
+// 	where()
+
+// }
